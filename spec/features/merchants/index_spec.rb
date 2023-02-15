@@ -2,9 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'The Merchant Index page', type: :feature do
   describe 'displays all merchants' do
-    WebMock.stub_request(:get, "localhost:3000/api/v1/merchants")
-      .to_return(body: File.read('./spec/fixtures/merchants.json'))
-
     before :each do
       visit merchants_path
     end

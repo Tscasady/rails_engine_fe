@@ -1,10 +1,10 @@
 class CommerceService
-  def initalize(uri = '')
+  def initialize(uri = '')
     @uri = uri
   end
 
   def call
-    service.get(@uri)
+    parse(service.get(@uri))
   end
 
   private 
@@ -20,7 +20,7 @@ class CommerceService
   end
 
   def base_uri
-    'localhost:3000'
+    'http://localhost:3000'
   end
 
   def parse(response)

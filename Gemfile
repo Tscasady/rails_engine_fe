@@ -46,9 +46,8 @@ group :development, :test do
   gem 'figaro'
   gem 'pry'
   gem 'rspec-rails'
-  gem 'simplecov'
   gem 'shoulda-matchers'
-  gem 'webmock'
+  gem 'simplecov'
 end
 
 group :development do
