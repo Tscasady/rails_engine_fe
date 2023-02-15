@@ -4,7 +4,7 @@ RSpec.describe CommerceService do
   describe 'instance methods' do
     describe '#call' do
       it 'returns a parsed json response from the merchants endpoint' do
-        response = CommerceService.new('/api/v1/merchants').call
+        response = CommerceService.new.call('/api/v1/merchants')
 
         expect(response).to have_key(:data)
         expect(response[:data]).to be_a Array
@@ -15,7 +15,7 @@ RSpec.describe CommerceService do
       end
 
       it 'returns a parsed json response from a specific merchant endpoint' do
-        response = CommerceService.new('/api/v1/merchants/1').call
+        response = CommerceService.new.call('/api/v1/merchants/1')
 
         expect(response).to have_key(:data)
         expect(response[:data]).to be_a Hash

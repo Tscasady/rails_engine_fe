@@ -1,19 +1,15 @@
 class CommerceService
-  def initialize(uri = '')
-    @uri = uri
-  end
-
-  def call
-    parse(service.get(@uri))
+  def call(uri)
+    parse(conn.get(uri))
   end
 
   private 
 
-  def service
-    Faraday.new(service_params)
+  def conn
+    Faraday.new(conn_params)
   end
 
-  def service_params
+  def conn_params
     {
       url: base_uri,
     }
