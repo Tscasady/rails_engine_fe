@@ -1,0 +1,7 @@
+<center>Merchants</center>
+<center>
+  <% @merchants.each do |merchant| %>
+    <%= link_to merchant.name, merchants_path(merchant) %>
+    <br>
+  <% end %>
+</center>
