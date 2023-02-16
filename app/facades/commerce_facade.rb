@@ -15,6 +15,13 @@ class CommerceFacade
     Merchant.new(response[:data])
   end
 
+  def merchant_items(id)
+    response = service.call("/api/v1/merchants/#{id}/items")
+    response[:data].map do |item_data|
+      Item.new(item_data)
+    end
+  end
+
   private 
 
   attr_reader :service

@@ -1,7 +1,7 @@
 <center>Merchants</center>
 <center>
   <% @merchants.each do |merchant| %>
-    <%= link_to merchant.name, merchants_path(merchant) %>
+    <%= link_to merchant.name, merchant_path(merchant.id) %>
     <br>
   <% end %>
 </center>

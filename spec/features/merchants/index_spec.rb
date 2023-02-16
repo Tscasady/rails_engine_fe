@@ -16,7 +16,7 @@ RSpec.describe 'The Merchant Index page', type: :feature do
 
       click_link 'Schroeder-Jerde'
 
-      expect(current_path).to eq merchant_path 
+      expect(current_path).to eq merchant_path(1) 
     end
   end
 end

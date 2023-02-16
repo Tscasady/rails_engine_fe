@@ -20,5 +20,13 @@ RSpec.describe CommerceFacade do
         expect(merchant).to be_a Merchant
       end
     end
+
+    describe '#merchant_items' do
+      it 'returns a list of items' do
+        items = @facade.merchant_items(1)
+        expect(items).to be_a Array
+        expect(items.first).to be_a Item
+      end
+    end
   end
 end
