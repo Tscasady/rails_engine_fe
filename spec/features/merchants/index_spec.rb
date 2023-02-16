@@ -7,14 +7,14 @@ RSpec.describe 'The Merchant Index page', type: :feature do
     end
 
     it 'has a list of merchants' do
-      expect(page).to have_content("A Name")
-      expect(page).to have_content("Another Name")
+      expect(page).to have_content('Schroeder-Jerde')
+      expect(page).to have_content('Rempel and Jones')
     end
 
     it 'has links to each merchant show page' do
-      expect(page).to have_link "A Name"
+      expect(page).to have_link 'Schroeder-Jerde'
 
-      click_link "A Name"
+      click_link 'Schroeder-Jerde'
 
       expect(current_path).to eq merchant_path 
     end

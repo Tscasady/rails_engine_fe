@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Merchant do
-  let!(:data) { { name: 'Test Merchant' } }
+  let!(:data) { { attributes: { name: 'Test Merchant' } } }
   let!(:merchant) { Merchant.new(data) }
 
   it 'has readable attributes' do

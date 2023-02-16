@@ -1,3 +1,5 @@
 class MerchantsController < ApplicationController
-  def index; end
+  def index
+    @merchants = CommerceFacade.new.merchants
+  end
 end
