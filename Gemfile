@@ -44,6 +44,7 @@ group :development, :test do
   gem 'faker'
   gem 'faraday'
   gem 'figaro'
+  gem 'launchy'
   gem 'pry'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
