@@ -28,5 +28,20 @@ RSpec.describe CommerceFacade do
         expect(items.first).to be_a Item
       end
     end
+
+    describe '#items' do
+      it 'returns an array of item objects' do
+        items = @facade.items
+        expect(items).to be_a Array
+        expect(items.first).to be_a Item
+      end
+    end
+
+    describe '#item' do
+      it 'returns an item object' do
+        item = @facade.item(4)
+        expect(item).to be_a Item
+      end
+    end
   end
 end

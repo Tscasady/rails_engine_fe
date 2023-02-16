@@ -22,6 +22,18 @@ class CommerceFacade
     end
   end
 
+  def items
+    response = service.call("/api/v1/items")
+    response[:data].map do |item_data|
+      Item.new(item_data)
+    end
+  end
+
+  def item(id)
+    response = service.call("/api/v1/items/#{id}")
+    Item.new(response[:data])
+  end
+
   private 
 
   attr_reader :service
